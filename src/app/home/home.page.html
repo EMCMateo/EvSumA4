@@ -1,20 +1,79 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+  <ion-content [fullscreen]="true">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    
+    <div class="xdd">
+      <ion-card color="black">
+        <ion-card-header>
+          <ion-item>
+            <ion-input label="Id" name="id" [(ngModel)]="Buscar"></ion-input>
+          </ion-item>
+          <ion-button color="success" (click)="getPokemonData(Buscar)">GET</ion-button>
+         <ion-button color="danger" (click)="resetData()">RESET ALL</ion-button> 
+          <ion-card-title class="xd"> Name: {{pokemon}}</ion-card-title>
+          <ion-card-title class="xd"> ID: {{pokemon_id}}</ion-card-title>
+
+        </ion-card-header>
+
+        <img [src]="img">
+<ion-chip [ngClass]="{
+        'steel': type === 'steel',
+        'water': type === 'water',
+        'bug': type === 'bug',
+        'dragon': type === 'dragon',
+        'electric': type === 'electric',
+        'fairy': type === 'fairy',
+        'ghost': type === 'ghost',
+        'fire': type === 'fire',
+        'ice': type === 'ice',
+        'fight': type === 'fighting',
+        'normal': type === 'normal',
+        'grass': type === 'grass',
+        'psychic': type === 'psychic',
+        'rock': type === 'rock',
+        'dark': type === 'dark',
+        'ground': type === 'ground',
+        'poison': type === 'poison',
+        'flying': type === 'flying',
+      
+      }">
+      <ion-card-title class="xd"> {{pokemon_n}}</ion-card-title>
+       </ion-chip>
+<!-- 
+       <ion-chip [ngClass]="{
+
+        'steel': type2 === 'steel',
+        'water': type2 === 'water',
+        'bug': type2 === 'bug',
+        'dragon': type2 === 'dragon',
+        'electric': type2 === 'electric',
+        'fairy': type2 === 'fairy',
+        'ghost': type2 === 'ghost',
+        'fire': type2 === 'fire',
+        'ice': type2 === 'ice',
+        'fight': type2 === 'fighting',
+        'normal': type2 === 'normal',
+        'grass': type2 === 'grass',
+        'psychic': type2 === 'psychic',
+        'rock': type2 === 'rock',
+        'dark': type2 === 'dark',
+        'ground': type2 === 'ground',
+        'poison': type2 === 'poison',
+        'flying': type2 === 'flying',
+      
+      }">
+      <ion-card-title class="xd"> {{pokemon_n_2}}</ion-card-title>
+       </ion-chip> -->
+
+       
+      </ion-card>
+      
+      
+      
+
+
+    
+
+      </div>
+  </ion-content>
